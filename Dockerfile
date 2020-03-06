@@ -10,7 +10,7 @@ RUN apt-get -y update && apt-get -y upgrade \
 RUN mkdir /usr/local/tomcat
 RUN wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz \
-    && cp -Rv /tmp/apache-tomcat-8.5.46/* /usr/local/tomcat/
+    && cp -Rv /tmp/apache-tomcat-8.5.51/* /usr/local/tomcat/
 EXPOSE 8080
 COPY ./webapp.war /usr/local/tomcat/webapps
 CMD /usr/local/tomcat/bin/startup.sh
