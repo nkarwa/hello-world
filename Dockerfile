@@ -12,5 +12,5 @@ RUN wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.51/bin/apach
 RUN cd /tmp && tar xvfz tomcat.tar.gz \
     && cp -Rv /tmp/apache-tomcat-8.5.51/* /usr/local/tomcat/
 EXPOSE 8080
-COPY ./webapp.war /usr/local/tomcat/webapps
+COPY /var/lib/jenkins/workspace/maven-01/webapp/target/webapp.war /usr/local/tomcat/webapps
 CMD /usr/local/tomcat/bin/startup.sh
